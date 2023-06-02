@@ -7,8 +7,8 @@
      steps:
        - name: Checkout repository
          uses: actions/checkout@v3
-         # with:
-         #  ref: v3-stable
+         with:
+           ref: v3-stable
        - name: Set up QEMU
          uses: docker/setup-qemu-action@v2
          with:
