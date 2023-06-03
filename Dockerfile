@@ -43,6 +43,12 @@ WORKDIR /usr/src/app
 
 COPY --from=json-copier /usr/src/app .
 
+# Install required packages
+RUN apt-get update && apt-get install -y \
+    g++ \
+    make \
+    python3
+
 # Run the install before copying the rest of the files
 RUN yarn config set workspaces-experimental true
 RUN yarn install --frozen-lockfile --verbose
