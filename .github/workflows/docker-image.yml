@@ -1,7 +1,7 @@
  name: Docker Image Build and Push
  on:
    push:
-     branches: [ v3-stable ]
+     branches: [ v3-stable-arm ]
    workflow_dispatch:
  jobs:
    docker:
@@ -10,7 +10,7 @@
        - name: Checkout repository
          uses: actions/checkout@v3
          with:
-           ref: v3-stable
+           ref: v3-stable-arm
        - name: Set up QEMU
          uses: docker/setup-qemu-action@v2
          with:
